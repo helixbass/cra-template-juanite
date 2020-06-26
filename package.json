@@ -5,7 +5,8 @@
     "react",
     "create-react-app",
     "template",
-    "typescript"
+    "typescript",
+    "ad-hok"
   ],
   "description": "TypeScript + ad-hok template for Create React App.",
   "repository": {
