@@ -1,27 +1,29 @@
 {
-  "name": "cra-template-typescript",
-  "version": "1.0.3",
+  "name": "cra-template-juanite",
+  "version": "0.0.1-dev.0",
   "keywords": [
     "react",
     "create-react-app",
     "template",
     "typescript"
   ],
-  "description": "The base TypeScript template for Create React App.",
+  "description": "TypeScript + ad-hok template for Create React App.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/facebook/create-react-app.git",
-    "directory": "packages/cra-template-typescript"
+    "url": "https://github.com/helixbass/cra-template-juanite.git"
   },
   "license": "MIT",
   "engines": {
     "node": ">=10"
   },
   "bugs": {
-    "url": "https://github.com/facebook/create-react-app/issues"
+    "url": "https://github.com/helixbass/cra-template-juanite/issues"
   },
   "files": [
     "template",
     "template.json"
-  ]
+  ],
+  "devDependencies": {
+    "prettier": "^2.0.5"
+  }
 }

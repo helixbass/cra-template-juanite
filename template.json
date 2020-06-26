@@ -9,7 +9,74 @@
       "@types/react-dom": "^16.9.0",
       "@types/jest": "^25.0.0",
       "typescript": "^3.9.5",
-      "web-vitals": "^0.2.2"
+      "web-vitals": "^0.2.2",
+      "eslint-config-prettier": "^6.11.0",
+      "eslint-plugin-prettier": "^3.1.4",
+      "prettier": "^2.0.5",
+      "@types/color": "^3.0.1",
+      "@types/lodash": "^4.14.155",
+      "@types/react-transition-group": "^4.4.0",
+      "ad-hok": "^0.1.0-",
+      "ad-hok-utils": "^0.0.4",
+      "color": "^3.1.2",
+      "eslint-plugin-import": "^2.21.2",
+      "gsap": "^3.3.3",
+      "lodash": "^4.17.15",
+      "react-transition-group": "^4.4.1",
+      "eslint-plugin-ad-hok": "github:helixbass/eslint-plugin-ad-hok#eslint-plugin-ad-hok-v0.2.2-dev.1-gitpkg",
+      "eslint-plugin-known-imports": "github:helixbass/eslint-plugin-known-imports#eslint-plugin-known-imports-v0.0.15-dev.2-gitpkg",
+      "eslint-plugin-styles-object": "^0.0.4"
+    },
+    "eslintConfig": {
+      "extends": [
+        "react-app",
+        "prettier",
+        "plugin:known-imports/recommended-react",
+        "plugin:known-imports/recommended-typescript",
+        "plugin:ad-hok/recommended"
+      ],
+      "plugins": [
+        "prettier",
+        "styles-object",
+        "known-imports",
+        "ad-hok",
+        "import"
+      ],
+      "rules": {
+        "prettier/prettier": "error",
+        "styles-object/no-unused-styles": "error",
+        "styles-object/no-undef-styles": "error",
+        "known-imports/no-unused-vars": [
+          "error",
+          {
+            "args": "after-used",
+            "ignoreRestSiblings": true,
+            "argsIgnorePattern": "^_"
+          }
+        ],
+        "import/order": [
+          "error",
+          {
+            "groups": [
+              ["builtin", "external"],
+              ["internal", "parent", "sibling", "index", "unknown"]
+            ],
+            "newlines-between": "always"
+          }
+        ],
+        "ad-hok/dependencies": "error",
+        "ad-hok/require-adddisplayname": "error"
+      },
+      "settings": {
+        "styles-object/stylesheet-create-function": "makeStyles",
+        "known-imports/extensions": [".ts", ".tsx", ".js", ".jsx"],
+        "import/extensions": [".ts", ".tsx", ".js", ".jsx"],
+        "import/internal-regex": "^(components|utils|graphql|config)/|^(App|theme|i18n-init)$",
+        "ad-hok/should-fix-flow-flowmax": true
+      }
+    },
+    "scripts": {
+      "lint": "eslint '**/*.ts' '**/*.tsx'"
     }
   }
 }
