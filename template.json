@@ -16,15 +16,15 @@
       "@types/color": "^3.0.1",
       "@types/lodash": "^4.14.155",
       "@types/react-transition-group": "^4.4.0",
-      "ad-hok": "^0.1.0-",
-      "ad-hok-utils": "^0.0.4",
+      "ad-hok": "^0.1.1",
+      "ad-hok-utils": "^0.1.0-beta.1",
       "color": "^3.1.2",
       "eslint-plugin-import": "^2.21.2",
       "gsap": "^3.3.3",
       "lodash": "^4.17.15",
       "react-transition-group": "^4.4.1",
-      "eslint-plugin-ad-hok": "github:helixbass/eslint-plugin-ad-hok#eslint-plugin-ad-hok-v0.2.2-dev.1-gitpkg",
-      "eslint-plugin-known-imports": "github:helixbass/eslint-plugin-known-imports#eslint-plugin-known-imports-v0.0.15-dev.2-gitpkg",
+      "eslint-plugin-ad-hok": "~0.3.0-beta.4",
+      "eslint-plugin-known-imports": "github:helixbass/eslint-plugin-known-imports#eslint-plugin-known-imports-v0.0.15-dev.3-gitpkg",
       "eslint-plugin-styles-object": "^0.0.4",
       "@emotion/core": "^10.0.28",
       "react-app-rewired": "^2.1.6",
@@ -37,7 +37,7 @@
         "prettier",
         "plugin:known-imports/recommended-react",
         "plugin:known-imports/recommended-typescript",
-        "plugin:ad-hok/recommended"
+        "plugin:ad-hok/recommended-typescript"
       ],
       "plugins": [
         "prettier",
@@ -68,7 +68,6 @@
             "newlines-between": "always"
           }
         ],
-        "ad-hok/dependencies": "error",
         "ad-hok/require-adddisplayname": "error"
       },
       "settings": {
@@ -76,7 +75,7 @@
         "known-imports/extensions": [".ts", ".tsx", ".js", ".jsx"],
         "import/extensions": [".ts", ".tsx", ".js", ".jsx"],
         "import/internal-regex": "^(components|utils|graphql|config)/|^(App|theme|i18n-init)$",
-        "ad-hok/should-fix-flow-flowmax": true
+        "ad-hok/should-fix-importable-names": true
       }
     },
     "scripts": {
